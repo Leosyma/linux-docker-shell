@@ -3,9 +3,6 @@
 # Imagem base
 FROM ubuntu:latest
 
-# Definir o mantenedor da imagem
-LABEL maintainer="suporte@datascienceacademy.com.br"
-
 # Atualizar pacotes e instalar alguns utilitários essenciais
 RUN apt-get update && apt-get install -y \
     curl \
@@ -15,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 
 # Definir diretório de trabalho
-WORKDIR /dsa
+WORKDIR /lab
 
 # Comando padrão ao iniciar o container
 CMD ["bash"]

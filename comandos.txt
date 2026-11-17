@@ -1,4 +1,3 @@
-# Data Science Academy
 # Administração de Sistema Operacional Linux com Docker e Kubernetes
 # Lab 1 - Primeiros Passos com Linux e Docker
 # Principais Comandos de Manipulação de Usuários e Grupos no Linux
@@ -34,10 +33,10 @@ getent passwd aluno1
 getent passwd aluno3
 
 # Cria uma pasta para a home do aluno3
-mkdir /dsa/aluno3
+mkdir /lab/aluno3
 
-# Altera o diretório home do usuário aluno3 para /dsa/aluno3
-usermod -d /dsa/aluno3 aluno3  
+# Altera o diretório home do usuário aluno3 para /lab/aluno3
+usermod -d /lab/aluno3 aluno3  
 
 # Adiciona o usuário aluno3 ao grupo root
 usermod -aG root aluno3  
@@ -81,14 +80,14 @@ usermod -aG alunos aluno3
 # Exibe novamente o conteúdo do arquivo /etc/group para confirmar a adição dos usuários ao grupo alunos
 cat /etc/group
 
-# Renomeia o grupo alunos para alunosdsa
-groupmod -n alunosdsa alunos
+# Renomeia o grupo alunos para alunos_linux
+groupmod -n alunos_linux alunos
 
-# Remove o usuário aluno3 do grupo alunosdsa
-gpasswd -d aluno3 alunosdsa
+# Remove o usuário aluno3 do grupo alunos_linux
+gpasswd -d aluno3 alunos_linux
 
-# Remove o grupo alunosdsa do sistema
-groupdel alunosdsa
+# Remove o grupo alunos_linux do sistema
+groupdel alunos_linux
 
 # Remove usuário
 userdel -r aluno3

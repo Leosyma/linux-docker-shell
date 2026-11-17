@@ -1,4 +1,3 @@
-# Data Science Academy
 # Administração de Sistema Operacional Linux com Docker e Kubernetes
 # Lab 1 - Primeiros Passos com Linux e Docker
 
@@ -8,13 +7,13 @@
 
 # Abra o terminal ou prompt de comando, navegue até a pasta com o Dockerfile e execute o comando abaixo para criar a imagem:
 
-docker build -t dsa-img-lab1 .
+docker build -t img-lab1 .
 
 # Execute o comando abaixo para criar o container:
 
-docker run -dit --name dsa-container-lab1 dsa-img-lab1
+docker run -dit --name container-lab1 img-lab1
 
 # Use o comando abaixo para acessar o shell do container a partir da máquina host:
 
-docker exec -it dsa-container-lab1 /bin/bash
+docker exec -it container-lab1 /bin/bash
 
